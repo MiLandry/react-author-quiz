@@ -1,14 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Book from './components/Book';
+import Books from './components/Books';
 
 class App extends Component {
+    data = [
+        {
+            name: 'Mark Twain',
+            imageUrl : '/public/images/twain.jpg',
+            books: ['The Adventures of Huckleberry Finn']
+        },
+        {
+            name: 'Charles Dickens',
+            imageUrl : '/public/images/dickens.jpg',
+            books: ['A Tale of Two Cities']
+        },
+        {
+            name: 'William Shakespeare',
+            imageUrl : '/public/images/Shakespeare.jpg',
+            books: ['Hamlet']
+        },
+        {
+            name: 'Heny david Thoreau',
+            imageUrl : '/public/images/thoreau.jpg',
+            books: ['Walden Pond']
+        },
+        {
+            name: 'Emily Dickinson',
+            imageUrl : '/public/images/dickinson.png',
+            books: ['A Clock Stopped']
+        },
+        {
+            name: 'Harper Lee',
+            imageUrl : '/public/images/lee.jpg',
+            books: ['To Kill a Mockingbird']
+        },
+    ];
+
   render() {
     return (
       <div className="App">
-      <h1>Hello, world, my prop is {this.props.foo}</h1>
-      <Book />
+      <h1>Author Quiz</h1>
+      <h2> Select the book written by the author shown </h2>
+      <Books data={this.data}/>
+      <footer> Copyright hamsterofdark </footer>
       </div>
     );
   }

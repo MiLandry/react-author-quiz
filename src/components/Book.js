@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 class Book extends Component {
   render() {
     return (
-      <div className="Book">
-      <p>Im a Book</p>
+      <div className="row">
+      <div className="col-md-4"> {this.props.data[0].name}</div>
       </div>
     );
   }
