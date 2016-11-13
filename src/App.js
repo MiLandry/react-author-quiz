@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Books from './components/Books';
+import BookList from './components/BookList';
+
+
 
 class App extends Component {
     data = [
@@ -36,12 +38,17 @@ class App extends Component {
         },
     ];
 
+    books = [
+    this.data[0].books[0]
+    ];
+
+
   render() {
     return (
       <div className="App">
       <h1>Author Quiz</h1>
       <h2> Select the book written by the author shown </h2>
-      <Books data={this.data}/>
+      <BookList books ={this.books}/>
       <footer> Copyright hamsterofdark </footer>
       </div>
     );

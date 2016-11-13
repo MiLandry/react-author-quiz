@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import Book from './Book';
 
-class Books extends Component {
+class BookList extends Component {
   render() {
     return (
       <div className="Books">
-      <Book data={this.props.data}/>
+      {this.props.books.map(function (b) {
+        return <Book data={b} />;
+      })}
       </div>
     );
   }
 }
 
-export default Books;
+export default BookList;
